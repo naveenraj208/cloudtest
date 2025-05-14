@@ -15,5 +15,7 @@ COPY . /app/
 
 EXPOSE 8080
 RUN python manage.py collectstatic --noinput
+RUN pip install gunicorn
 
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8080"] 
+# Command to run the app using Gunicorn, on 0.0.0.0:8080
+CMD ["gunicorn", "--bind", "0.0.0.0:8080", "myproject.wsgi:application"]
