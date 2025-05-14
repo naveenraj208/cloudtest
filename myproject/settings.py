@@ -94,6 +94,16 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'et_db',
+        'USER': 'ET_user',
+        'PASSWORD': 'NAVEEN',
+        'HOST': f'/cloudsql/{os.environ.get("finalcloud-459801:asia-south1:cloudtestdb")}',
+        'PORT': '5432',
+    }
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
