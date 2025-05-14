@@ -95,13 +95,22 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+'''DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'et_db',
+        'USER': 'ET_user',
+        'PASSWORD': 'RAJEEV',
+        'HOST': '34.47.250.110',
+        'PORT': '5432',
+    }
+}'''
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
         "NAME": BASE_DIR / "db.sqlite3",
     }
 }
-
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
