@@ -140,11 +140,11 @@ STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-ALLOWED_HOSTS = [ 'https://35.201.123.45','etcloud-1000771588940.asia-south1.run.app']
+ALLOWED_HOSTS = [ 'http://35.201.123.45','etcloud-1000771588940.asia-south1.run.app','http://34.120.71.63:8080']
 
 CSRF_TRUSTED_ORIGINS = [
     'https://etcloud-1000771588940.asia-south1.run.app',
     'http://etcloud-1000771588940.asia-south1.run.app',
-    '35.244.214.250'
+    '35.244.214.250','34.120.71.63:8080',
 
 ]
