@@ -74,16 +74,6 @@ WSGI_APPLICATION = "myproject.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'et_db',
-        'USER': 'ET_user',
-        'PASSWORD': 'NAVEEN',
-        'HOST': 'finalcloud-459801:asia-south1:cloudtestdb',
-        'PORT': '5432',
-    }
-}
 
 
 # Password validation
