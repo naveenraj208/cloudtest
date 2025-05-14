@@ -25,4 +25,4 @@ COPY . .
 CMD ./cloud_sql_proxy -dir=/cloudsql -instances=expensetracker-1000771588940:asia-south1:myfinancetool=tcp:5432 & \
     sleep 5 && \
     python manage.py migrate && \
-    gunicorn myproject.wsgi:application --bind 0.0.0.0:8080
+    gunicorn myproject.wsgi:application --bind 0.0.0.0:${PORT:-8080}
