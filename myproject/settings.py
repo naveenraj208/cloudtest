@@ -155,3 +155,12 @@ DATABASES = {
         },
     }
 }
+
+
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+ALLOWED_HOSTS = ['https://etcloud-1000771588940.asia-south1.run.app']
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://etcloud-1000771588940.asia-south1.run.app',
+    'https://etcloud-1000771588940.asia-south1.run.app',
+]
