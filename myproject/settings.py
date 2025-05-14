@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
-ALLOWED_HOSTS = ['*']
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -122,45 +121,10 @@ STATIC_URL = "static/"
 
 LOGIN_URL = '/login/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-import os
-import dj_database_url
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = '/static/'
-
-# PostgreSQL database configuration
-DATABASES = {
-    'default': dj_database_url.config(
-        default='sqlite:///db.sqlite3', conn_max_age=600
-    )
-}
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'your_db_name',
-        'USER': 'your_user@your_server',
-        'PASSWORD': 'your_password',
-        'HOST': 'your_server.postgres.database.azure.com',
-        'PORT': '5432',
-        'OPTIONS': {
-            'sslmode': 'require',
-        },
-    }
-}
-
-
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-ALLOWED_HOSTS = ['https://etcloud-1000771588940.asia-south1.run.app']
-
-CSRF_TRUSTED_ORIGINS = [
-    'https://etcloud-1000771588940.asia-south1.run.app',
-    'https://etcloud-1000771588940.asia-south1.run.app',
-]

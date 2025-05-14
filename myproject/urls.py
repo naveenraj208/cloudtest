@@ -30,3 +30,4 @@ urlpatterns = [
     path('reports/', views.reports, name='reports'),
     path('profile/', views.profile, name='profile'),
 ]
+ALLOWED_HOSTS = ['*']
